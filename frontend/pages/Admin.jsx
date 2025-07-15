@@ -20,7 +20,7 @@ export default function Admin() {
 
     const sendData = async (e) => {
         e.preventDefault()
-        const result = await axios.post(" https://render.com/docs/web-services#port-binding/admin", bookData)
+        const result = await axios.post("https://book-app-qnzs.onrender.com/admin", bookData)
         setbookData({
             title: "",
             author: "",

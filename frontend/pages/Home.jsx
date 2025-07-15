@@ -12,7 +12,7 @@ export default function Home() {
     const [booknotfound, setbooknotfound] = useState("");
 
     const getData = async (find) => {
-        const books = await axios.get(" https://render.com/docs/web-services#port-binding")
+        const books = await axios.get("https://book-app-qnzs.onrender.com/")
         setbooksdb(books.data.Allbooks)
         setfilterBooks(books.data.Allbooks)
         // console.log(books.data.Allbooks)
@@ -29,7 +29,7 @@ export default function Home() {
             return;
         }
         
-        const searchBook=await axios(" https://render.com/docs/web-services#port-binding")
+        const searchBook=await axios("https://book-app-qnzs.onrender.com/")
 
         const found=filterBooks.filter((book)=>{
             return book.title.toLowerCase().includes(search.toLowerCase());
